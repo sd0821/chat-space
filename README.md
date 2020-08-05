@@ -8,7 +8,7 @@
 |password_confirmation|string|null: false|
 
 ### Association
-- has_many :massages
+- has_many :messages
 - has_many :groups_users
 - has_many :users, through: :groups_users
 
@@ -16,15 +16,15 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false|
+|group_name|string|null: false|
 
 ### Association
-- has_many :massages
+- has_many :messages
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 
 
-## massagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
