@@ -3,12 +3,12 @@
     .user-name
       .top-itmes
         .itmes-name
-          masa
+          = current_user.name
         .itmes-icons
           .icons
             = link_to "#" , class: "icons-btn" do
               = icon('fas', 'edit')
-            = link_to "#" , class: "icons-btn" do
+            = link_to edit_user_path(current_user) , class: "icons-btn" do
               = icon('fas', 'cog')
   .Side_ber__groups_list
     .group-list
