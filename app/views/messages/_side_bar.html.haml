@@ -6,23 +6,15 @@
           = current_user.name
         .itmes-icons
           .icons
-            = link_to "#" , class: "icons-btn" do
+            = link_to new_group_path(current_user) , class: "icons-btn" do
               = icon('fas', 'edit')
             = link_to edit_user_path(current_user) , class: "icons-btn" do
               = icon('fas', 'cog')
   .Side_ber__groups_list
-    .group-list
-      .group-name
-        techcamp
-      .last-message
-        まだメッセージがありません
-    .group-list
-      .group-name
-        techcamp
-      .last-message
-        まだメッセージがありません
-    .group-list
-      .group-name
-        techcamp
-      .last-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group-list
+        = link_to '#' do
+          .group-name
+            = group.name
+          .last-message
+            メッセージはまだありません
