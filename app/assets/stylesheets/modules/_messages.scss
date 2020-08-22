@@ -51,6 +51,9 @@ $colorw:#ffffff;
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0px 20px;
+    a{
+      text-decoration: none;
+    }
     .group-list{
       padding: 20px 0px 40px 0px;
       .group-name{
@@ -106,6 +109,7 @@ $colorw:#ffffff;
     }
   }
   &__message_list{
+    overflow:scroll;
     height: calc(100vh - 100px - 90px);
     box-sizing: border-box;
     background-color: #fafafa;
