@@ -17,7 +17,7 @@
     .form
       = form_with model: [@group, @message], html:{class: "new-message"}, local: true do |f|
         .input-box
-          = f.text_field :content, placeholder: "type a message" , class: "input-box__text" 
+          = f.text_area :content, placeholder: "type a message" , class: "input-box__text" 
           = f.label :image, class: "input-box__image" do
             = icon('far' , 'image', class: "input-box__image__icon")
             = f.file_field :image, class: "input-box__image__file" 
