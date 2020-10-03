@@ -38,7 +38,7 @@ describe MessagesController do
 
   
   describe '#create' do
-    let(:params) { {group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
+    let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
 
     context 'ログインしてる' do
       before do
@@ -51,7 +51,7 @@ describe MessagesController do
           params: params
         }
         it 'messageレコードが追加された' do
-          expect{ subject }.to change(Message, :count).by(1)
+          expect { subject }.to change(Message, :count).by(1)
         end
         it '意図した遷移ができているか' do
           subject
@@ -60,7 +60,7 @@ describe MessagesController do
       end
 
       context '保存に失敗した' do
-        let(:invalid_params) { {group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
+        let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
         subject {
           post :create,
           params: invalid_params
